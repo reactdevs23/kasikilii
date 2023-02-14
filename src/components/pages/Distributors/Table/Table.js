@@ -3,7 +3,7 @@ import { Title } from "../../../common.styled";
 
 import CheckBox from "../../../Checkbox/CheckBox";
 import styles from "./styles.module.css";
-import { userData } from "../../../../assets/data";
+import { distributorData } from "../../../../assets/data";
 import { Link } from "react-router-dom";
 const Table = () => {
   const heading = [
@@ -12,9 +12,8 @@ const Table = () => {
     "STATUS",
     "REGION",
     "BALANCE",
-    "REQUEST",
-    "AMOUNT",
-    "HISTORY",
+    "DISTRIBUTOR CODE",
+    "History",
   ];
 
   return (
@@ -28,7 +27,7 @@ const Table = () => {
       </div>
 
       <div className={styles.table}>
-        {userData.map((el, i) => (
+        {distributorData.map((el, i) => (
           <div key={i} className={styles.tableContainer}>
             <Title
               padding="12px 0"
@@ -71,21 +70,14 @@ const Table = () => {
               {el.balance}
             </Title>{" "}
             <Title
+              center
               padding="12px 0"
               fontFamily=" 'Quicksand', sans-serif"
               className={styles.title}
               mobileFontSize="15px"
             >
-              {el.request ? el.request : "-"}
+              {el.distributorcode}
             </Title>{" "}
-            <Title
-              padding="12px 0"
-              fontFamily=" 'Quicksand', sans-serif"
-              className={styles.title}
-              mobileFontSize="15px"
-            >
-              {el.amount ? el.amount : "-"}
-            </Title>
             <Link to={`/distributorDetails`} className={styles.viewButton}>
               VIEW NOW
             </Link>

@@ -1,10 +1,17 @@
 import React from "react";
 import styles from "./styles.module.css";
 import "./style.css";
+import { logout } from "../../assets/image/images";
 
-const Header = () => {
+const Header = ({ setLogin }) => {
   return (
     <section className={styles.headerWrapper}>
+      <img
+        src={logout}
+        alt="#"
+        className={styles.logOut}
+        onClick={() => setLogin(false)}
+      />
       <header className={styles.header}>
         <div className={styles.logoContainer}>
           <h2 className={styles.logo}>KASIKILI</h2>

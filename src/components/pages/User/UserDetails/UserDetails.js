@@ -1,25 +1,41 @@
 import React from "react";
 import { AmountBox, Heading, Tagline } from "../../../common.styled";
 import { userDetails } from "../../../../assets/data";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 import styles from "./styles.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const UserDetails = () => {
   const { id } = useParams();
-  const heading = ["DATE", "AMOUNTS(NS)", "DISTRIBUTORS", "ACTIVITY"];
+  const navigate = useNavigate();
+  const heading = [
+    "DATE",
+    "TRANS ID",
+    "AMOUNTS(NS)",
+    "DISTRIBUTORS",
+    "ACTIVITY",
+  ];
+
+  const details = [
+    { key: "MOBILE", value: "081 808 2569" },
+    { key: " REGION", value: " KHOMAS" },
+    { key: "UIN", value: "U205" },
+  ];
 
   return (
     <div className={styles.distributorWrapper}>
+      <FaLongArrowAltLeft
+        className={styles.icon}
+        onClick={() => navigate(-1)}
+      />
+
       <div className={styles.distributorInfo}>
         <div className={styles.details}>
-          <Tagline className={styles.headingAndTagline}>
-            <span>MOBILE</span> <span className={styles.clone}>:</span>{" "}
-            <span>081 808 2569</span>
-          </Tagline>
-
-          <Tagline className={styles.headingAndTagline}>
-            REGION <span className={styles.clone}>:</span> KHOMAS
-          </Tagline>
+          {details.map((el, i) => (
+            <Tagline className={styles.headingAndTagline} key={i}>
+              {el.key} <span className={styles.clone}>:</span> {el.value}
+            </Tagline>
+          ))}
         </div>
         <div>
           <Tagline className={styles.tagline}>BALANCE</Tagline>
@@ -43,6 +59,7 @@ const UserDetails = () => {
           key={i}
         >
           <p className={`${styles.title} ${styles.value}`}>{el.date}</p>{" "}
+          <p className={`${styles.title} ${styles.value}`}>{el.transId}</p>
           <p className={`${styles.title} ${styles.value}`}>{el.amount}</p>
           <p className={`${styles.title} ${styles.value}`}>{el.distributor}</p>
           <p className={`${styles.title} ${styles.value}`}>{el.activity}</p>

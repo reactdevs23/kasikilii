@@ -3,42 +3,29 @@ import { AmountBox, Title } from "../../common.styled";
 import DropDownComponent from "../../DropDownComponent/DropDownComponent";
 import Input from "../../Input/Input";
 import styles from "./styles.module.css";
-import SuccessPopup from "./SuccessPopup/SuccessPopup";
+import SuccessPopup from "./SuccessPopup/TickUpdatePopup";
 import Table from "./Table/Table";
+import MyDatePicker from "../../DatePicker/DatePicker";
 
 const User = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [criteria, setCriteria] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  const dropDownItems = ["Mobile no", "Status", "Region", "Request Status"];
+  const dropDownItems = [
+    "Mobile no",
+    "Status",
+    "Region",
+    "Request Status",
+    "List From Highest Balance",
+    "List From Lowest Balance",
+  ];
   const [file, setFile] = useState("");
-  const [modal, setModal] = useState(false);
+  const [tickUpdate, setTickUpdate] = useState(false);
+  const [massUpdate, setMassUpdate] = useState(false);
 
   const searchFunction = (e) => {
     setSearchValue(e.target.value);
-  };
-
-  const [values, setValues] = useState({
-    dateFrom: "",
-    dateTo: "",
-  });
-
-  const datesInput = [
-    {
-      label: "Date From:",
-      type: "date",
-      name: "dateFrom",
-      placeholder: "dd-mm-yyyy",
-      pattern: "d{1,2}-d{1,2}-d{4}",
-    },
-    {
-      label: "Date To:",
-      type: "date",
-      name: "dateTo",
-      placeholder: "dd-mm-yyyy",
-    },
-  ];
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const data = [
@@ -47,10 +34,9 @@ const User = () => {
     { title: "TOTAL CASH OUT REQUEST  - N$", value: "2880" },
     { title: "TOTAL USER S CASHING OUT ", value: "32" },
   ];
-  const handleSearch = () => {
-    // handle search
+  const handleSearch = (e) => {
+    e.preventDefault();
   };
-
   return (
     <div>
       <div className={styles.searchDatesTotal}>
@@ -78,14 +64,15 @@ const User = () => {
         </div>
 
         <div className={styles.details}>
-          {datesInput.map((input, i) => (
-            <Input
-              {...input}
-              key={i}
-              value={values[input.name]}
-              onChange={onChange}
+          <div>
+            <MyDatePicker
+              label="Date From"
+              date={startDate}
+              setDate={setStartDate}
             />
-          ))}
+
+            <MyDatePicker date={endDate} setDate={setEndDate} label="Date To" />
+          </div>
 
           <div className={styles.updateBox}>
             <label for="file" className={styles.fileLabel}>
@@ -99,11 +86,15 @@ const User = () => {
               <p className={styles.fileText}>Choose File</p>
             </label>
             <div className={styles.buttonContainer}>
-              <label for="file" className={styles.upDateButton}>
+              <label
+                for="file"
+                className={styles.upDateButton}
+                onClick={() => setMassUpdate((prev) => !prev)}
+              >
                 MASS UPDATE
               </label>{" "}
               <button
-                onClick={() => setModal((prev) => !prev)}
+                onClick={() => setTickUpdate((prev) => !prev)}
                 className={styles.upDateButton}
               >
                 TICK UPDATE
@@ -122,7 +113,8 @@ const User = () => {
         </div>
       </div>{" "}
       <Table />
-      {modal && <SuccessPopup setModal={setModal} />}
+      {tickUpdate && <SuccessPopup setModal={setTickUpdate} />}
+      {massUpdate && <SuccessPopup setModal={setMassUpdate} />}
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const Title = styled.p`
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "700")};
   font-size: 16px;
   line-height: 150%;
-
+  text-align: ${({ center }) => (center ? "center" : "")};
   color: #392e2d;
   padding: ${({ padding }) => (padding ? padding : "5px")};
   @media only screen and (max-width: 1399px) {
@@ -47,7 +47,7 @@ export const Heading = styled.h2`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 150%;
 
   color: #392e2d;
@@ -57,7 +57,7 @@ export const Tagline = styled.h4`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 150%;
 
   color: #392e2d;

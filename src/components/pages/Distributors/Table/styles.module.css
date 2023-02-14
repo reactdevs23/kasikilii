@@ -5,12 +5,12 @@
   border-top: 1px solid #5f6368;
   border-bottom: 1px solid #5f6368;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr) 180px 1fr;
   gap: 25px;
 }
 .tableContainer {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr) 180px 1fr;
   gap: 25px;
 }
 

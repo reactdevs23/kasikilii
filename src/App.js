@@ -21,7 +21,7 @@ function App() {
   }, [login]);
   return (
     <>
-      <Header />
+      <Header setLogin={setLogin} />
       {login ? (
         <>
           <Container className={styles.pageWrapper}>

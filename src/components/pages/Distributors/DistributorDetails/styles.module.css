@@ -1,3 +1,14 @@
+.wrapper {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  left: 0;
+  top: -38px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .distributorInfo {
   display: flex;
   justify-content: space-between;
@@ -33,7 +44,7 @@
 
 .tableContainer {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1.5fr 0.8fr;
+  grid-template-columns: 1fr 1fr 1fr 1.3fr 0.8fr;
 }
 .tableContainer2 {
   max-height: 230px;

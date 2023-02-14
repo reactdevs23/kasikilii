@@ -1,41 +1,28 @@
 import React, { useState } from "react";
+
 import { AmountBox, Title } from "../../common.styled";
 import DropDownComponent from "../../DropDownComponent/DropDownComponent";
 import Input from "../../Input/Input";
 import styles from "./styles.module.css";
 import Table from "./Table/Table";
+import MyDatePicker from "../../DatePicker/DatePicker";
 
 const Distributor = () => {
   const [criteria, setCriteria] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  const dropDownItems = ["Mobile no", "Status", "Region", "Request Status"];
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const dropDownItems = [
+    "Mobile no",
+    "Status",
+    "Region",
+    "Request Status",
+    "List From Highest Balance",
+    "List From Lowest Balance",
+  ];
 
   const searchFunction = (e) => {
     setSearchValue(e.target.value);
-  };
-
-  const [values, setValues] = useState({
-    dateFrom: "",
-    dateTo: "",
-  });
-
-  const datesInput = [
-    {
-      label: "Date From:",
-      type: "date",
-      name: "dateFrom",
-      placeholder: "dd-mm-yyyy",
-      pattern: "d{1,2}-d{1,2}-d{4}",
-    },
-    {
-      label: "Date To:",
-      type: "date",
-      name: "dateTo",
-      placeholder: "dd-mm-yyyy",
-    },
-  ];
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const data = [
@@ -73,16 +60,13 @@ const Distributor = () => {
         </div>
 
         <div>
-          {datesInput.map((input, i) => (
-            <div className={styles.details} key={i}>
-              <Input
-                {...input}
-                key={i}
-                value={values[input.name]}
-                onChange={onChange}
-              />
-            </div>
-          ))}
+          <MyDatePicker
+            label="Date From"
+            date={startDate}
+            setDate={setStartDate}
+          />
+
+          <MyDatePicker date={endDate} setDate={setEndDate} label="Date To" />
         </div>
         <div className={styles.TotalAmout}>
           {data.map((el, i) => (
