@@ -44,10 +44,9 @@ const ForgotPassword = ({ setLogin }) => {
           {" "}
           <div className={styles.inputContainer}>
             {inputs.map((input, i) => (
-              <div className={styles.inputWrapper}>
+              <div className={styles.inputWrapper} key={i}>
                 <Input
                   {...input}
-                  key={i}
                   value={values[input.name]}
                   onChange={onChange}
                 />
