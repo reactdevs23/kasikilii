@@ -51,7 +51,7 @@ const CreditGeneration = () => {
           onChange={onChange}
         />
       </div>
-      <Button onClick={handleSubmit}>ButtonTRANSFER</Button>
+      <Button onClick={handleSubmit}>TRANSFER</Button>
     </form>
   );
 };

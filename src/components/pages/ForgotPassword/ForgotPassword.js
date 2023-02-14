@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import Input from "../../Input/Input";
 
 import styles from "./styles.module.css";
-const Login = ({ setLogin }) => {
+const ForgotPassword = () => {
   const [values, setValues] = useState({
-    mobile: "",
     email: "",
-    password: "",
-    stateoftheassest: "",
+    newpassword: "",
+    retypepassword: "",
   });
 
   const inputs = [
-    {
-      type: "phone",
-      name: "mobile",
-      placeholder: "John Doe",
-    },
     {
       type: "email",
       name: "email",
@@ -24,8 +18,13 @@ const Login = ({ setLogin }) => {
     },
     {
       type: "password",
-      name: "password",
+      name: "newpassword",
 
+      placeholder: " Password",
+    },
+    {
+      type: "password",
+      name: "retypepassword",
       placeholder: " Password",
     },
   ];
@@ -34,13 +33,13 @@ const Login = ({ setLogin }) => {
   };
   const submitFunction = (e) => {
     e.preventDefault();
-    setLogin(true);
   };
+
   return (
     <section className={styles.loginWrapper}>
       <div className={styles.logIn}>
-        <h2 className={styles.title}>Login</h2>
-        <p className={styles.text}>Login to manage payouts</p>
+        <h2 className={styles.title}>Forgot Password</h2>
+
         <form className={styles.form}>
           {" "}
           <div className={styles.inputContainer}>
@@ -59,16 +58,8 @@ const Login = ({ setLogin }) => {
               className={styles.button}
               onClick={(e) => submitFunction(e)}
             >
-              Login
+              Reset
             </button>
-          </div>
-          <div to="#" className={styles.forgotPassword}>
-            <span> Forgot your password?</span>
-            {"  "}
-            <Link to="/forgotPassword" className={styles.link}>
-              {"  "}
-              Click Here
-            </Link>
           </div>
         </form>
       </div>
@@ -76,4 +67,4 @@ const Login = ({ setLogin }) => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

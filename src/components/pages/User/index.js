@@ -86,13 +86,12 @@ const User = () => {
               <p className={styles.fileText}>Choose File</p>
             </label>
             <div className={styles.buttonContainer}>
-              <label
-                htmlFor="file"
+              <button
                 className={styles.upDateButton}
                 onClick={() => setMassUpdate((prev) => !prev)}
               >
                 MASS UPDATE
-              </label>{" "}
+              </button>{" "}
               <button
                 onClick={() => setTickUpdate((prev) => !prev)}
                 className={styles.upDateButton}

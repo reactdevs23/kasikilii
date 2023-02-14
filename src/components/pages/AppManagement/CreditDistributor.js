@@ -81,7 +81,7 @@ const CreditDistributor = () => {
             onChange={onChange}
           ></Input>
         </div>
-        <Button onClick={(e) => handleSubmit(e)}>Reset Disto Pass</Button>
+        <Button onClick={(e) => handleSubmit(e)}>Reset Distro Pass</Button>
       </div>
     </form>
   );
