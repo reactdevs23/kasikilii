@@ -1,6 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { user, distributor, home, setting } from "../../assets/image/images";
+import {
+  user,
+  distributor,
+  home,
+  setting,
+  appmangement,
+} from "../../assets/image/images";
 import styles from "./styles.module.css";
 
 const Sidebar = () => {
@@ -16,7 +22,7 @@ const Sidebar = () => {
       to: "/user",
     },
     {
-      icon: user,
+      icon: appmangement,
       navItem: "APP MANAGEMENT",
       to: "/appmanagement",
     },
