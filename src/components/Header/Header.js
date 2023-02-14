@@ -6,14 +6,15 @@ import { logout } from "../../assets/image/images";
 const Header = ({ setLogin }) => {
   return (
     <section className={styles.headerWrapper}>
-      <img
-        src={logout}
-        alt="#"
-        className={styles.logOut}
-        onClick={() => setLogin(false)}
-      />
       <header className={styles.header}>
         <div className={styles.logoContainer}>
+          {" "}
+          <img
+            src={logout}
+            alt="#"
+            className={styles.logOut}
+            onClick={() => setLogin(false)}
+          />
           <h2 className={styles.logo}>KASIKILI</h2>
           <p className={styles.tagline}>DIGITAL BERGMANN JACKPOTS</p>
         </div>
