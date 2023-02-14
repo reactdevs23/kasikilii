@@ -59,7 +59,7 @@ const ForgotPassword = ({ setLogin }) => {
               className={styles.button}
               onClick={(e) => submitFunction(e)}
             >
-              Login
+              RESET
             </button>
           </div>
           <div to="#" className={styles.forgotPassword}>
