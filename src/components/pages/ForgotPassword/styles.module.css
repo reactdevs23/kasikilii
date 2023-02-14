@@ -37,7 +37,6 @@
   font-size: 24px;
   line-height: 150%;
   color: #ffffff;
-  padding-bottom: 25px;
 }
 .text {
   font-family: "Poppins";
@@ -59,7 +58,7 @@
   padding-bottom: 30px;
 }
 .button {
-  background: linear-gradient(180deg, #e63535 4.69%, #fbbc41 80.21%);
+  background: linear-gradient(180deg, #1c97a6 4.69%, #392e2d 80.21%);
 
   border-radius: 100px;
   font-family: "Roboto";
@@ -90,6 +89,26 @@
   line-height: 150%;
   color: #ffffff;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #ffffff;
+  text-align: center;
   display: block;
   cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+}
+.inputWrapper {
+  padding: 5px 0;
 }

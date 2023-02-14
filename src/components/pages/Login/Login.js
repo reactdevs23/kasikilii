@@ -45,12 +45,14 @@ const Login = ({ setLogin }) => {
           {" "}
           <div className={styles.inputContainer}>
             {inputs.map((input, i) => (
-              <Input
-                {...input}
-                key={i}
-                value={values[input.name]}
-                onChange={onChange}
-              />
+              <div className={styles.inputWrapper}>
+                <Input
+                  {...input}
+                  key={i}
+                  value={values[input.name]}
+                  onChange={onChange}
+                />
+              </div>
             ))}
           </div>
           <div className={styles.buttonContainer}>
