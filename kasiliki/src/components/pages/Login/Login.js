@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import Input from "../../Input/Input";
 
 import styles from "./styles.module.css";
-const ForgotPassword = () => {
+const Login = ({ setLogin }) => {
   const [values, setValues] = useState({
+    mobile: "",
     email: "",
-    newpassword: "",
-    retypepassword: "",
+    password: "",
+    stateoftheassest: "",
   });
 
   const inputs = [
+    {
+      type: "phone",
+      name: "mobile",
+      placeholder: "John Doe",
+    },
     {
       type: "email",
       name: "email",
@@ -18,14 +24,9 @@ const ForgotPassword = () => {
     },
     {
       type: "password",
-      name: "newpassword",
+      name: "password",
 
-      placeholder: "New Password",
-    },
-    {
-      type: "password",
-      name: "retypepassword",
-      placeholder: "Retype Password",
+      placeholder: " Password",
     },
   ];
   const onChange = (e) => {
@@ -33,13 +34,13 @@ const ForgotPassword = () => {
   };
   const submitFunction = (e) => {
     e.preventDefault();
+    setLogin(true);
   };
-
   return (
     <section className={styles.loginWrapper}>
       <div className={styles.logIn}>
-        <h2 className={styles.title}>Forgot Password</h2>
-
+        <h2 className={styles.title}>Login</h2>
+        <p className={styles.text}>Login to manage payouts</p>
         <form className={styles.form}>
           {" "}
           <div className={styles.inputContainer}>
@@ -58,8 +59,16 @@ const ForgotPassword = () => {
               className={styles.button}
               onClick={(e) => submitFunction(e)}
             >
-              Reset
+              Login
             </button>
+          </div>
+          <div to="#" className={styles.forgotPassword}>
+            <span> Forgot your password?</span>
+            {"  "}
+            <Link to="/forgotPassword" className={styles.link}>
+              {"  "}
+              Click Here
+            </Link>
           </div>
         </form>
       </div>
@@ -67,4 +76,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default Login;

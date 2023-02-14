@@ -20,12 +20,12 @@ const ForgotPassword = () => {
       type: "password",
       name: "newpassword",
 
-      placeholder: "New Password",
+      placeholder: " Password",
     },
     {
       type: "password",
       name: "retypepassword",
-      placeholder: "Retype Password",
+      placeholder: " Password",
     },
   ];
   const onChange = (e) => {
