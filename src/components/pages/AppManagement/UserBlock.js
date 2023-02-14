@@ -27,24 +27,22 @@ const UserBlock = () => {
       <div>
         <h4 className={styles.title}>USER BLOCK </h4>
 
-        <form action="">
-          <Title>MOBILE NUMBER</Title>
-          <Input
-            name="mobileNumber"
-            value={values["mobileNumber"]}
-            onChange={onChange}
-          />
+        <Title>MOBILE NUMBER</Title>
+        <Input
+          name="mobileNumber"
+          value={values["mobileNumber"]}
+          onChange={onChange}
+        />
 
-          <DropDownComponent
-            title="ENABLE / DISABLE"
-            items={userBlockDropDownItems}
-            value={userBlockEnable}
-            setValue={setUserBlockEnable}
-          />
-          <div className={styles.buttonContainer}>
-            <Button onClick={handleSubmit}>Process</Button>
-          </div>
-        </form>
+        <DropDownComponent
+          title="ENABLE / DISABLE"
+          items={userBlockDropDownItems}
+          value={userBlockEnable}
+          setValue={setUserBlockEnable}
+        />
+        <div className={styles.buttonContainer}>
+          <Button onClick={handleSubmit}>Process</Button>
+        </div>
       </div>
       <div>
         <h4 className={styles.title}>SET PROBABILTY </h4>

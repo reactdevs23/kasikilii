@@ -75,7 +75,7 @@ const User = () => {
           </div>
 
           <div className={styles.updateBox}>
-            <label for="file" className={styles.fileLabel}>
+            <label htmlFor="file" className={styles.fileLabel}>
               <input
                 type="file"
                 value={file}
@@ -87,7 +87,7 @@ const User = () => {
             </label>
             <div className={styles.buttonContainer}>
               <label
-                for="file"
+                htmlFor="file"
                 className={styles.upDateButton}
                 onClick={() => setMassUpdate((prev) => !prev)}
               >

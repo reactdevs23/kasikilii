@@ -54,19 +54,19 @@ const DistributorDetails = () => {
             </h3>
           ))}
         </div>
-        <div className={`${styles.tableContainer} ${styles.tableContainer2}`}>
-          {distributorDetails.map((el, i) => (
-            <>
-              <p className={`${styles.title} ${styles.value}`}>{el.date}</p>{" "}
-              <p className={`${styles.title} ${styles.value}`}>{el.transId}</p>
-              <p className={`${styles.title} ${styles.value}`}>{el.amount}</p>
-              <p className={`${styles.title} ${styles.value}`}>
-                {el.recipient}
-              </p>
-              <p className={`${styles.title} ${styles.value}`}>{el.activity}</p>
-            </>
-          ))}
-        </div>
+
+        {distributorDetails.map((el, i) => (
+          <div
+            className={`${styles.tableContainer} ${styles.tableContainer2}`}
+            key={i}
+          >
+            <p className={`${styles.title} ${styles.value}`}>{el.date}</p>{" "}
+            <p className={`${styles.title} ${styles.value}`}>{el.transId}</p>
+            <p className={`${styles.title} ${styles.value}`}>{el.amount}</p>
+            <p className={`${styles.title} ${styles.value}`}>{el.recipient}</p>
+            <p className={`${styles.title} ${styles.value}`}>{el.activity}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
