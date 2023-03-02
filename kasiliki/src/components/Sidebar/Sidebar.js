@@ -5,7 +5,6 @@ import {
   distributor,
   home,
   setting,
-  confirmation,
   appmangement,
 } from "../../assets/image/images";
 import styles from "./styles.module.css";
@@ -22,12 +21,6 @@ const Sidebar = () => {
       navItem: "USERS",
       to: "/user",
     },
-    {
-      icon: confirmation,
-      navItem: "PoP CONFIRMATION",
-      to: "/popconfirmation",
-    },
-
     {
       icon: appmangement,
       navItem: "APP MANAGEMENT",

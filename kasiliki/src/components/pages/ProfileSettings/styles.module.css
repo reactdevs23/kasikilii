@@ -47,25 +47,11 @@
 .inputContainer {
   padding: 5px 0;
 }
-.staffCodeContainer {
-  display: grid;
-  grid-template-columns: 0.85fr 0.85fr 1.3fr;
-  gap: 10px;
-}
-
 .inputWrapper {
   display: grid;
-  grid-template-columns: 1.7fr 1.3fr;
-  gap: 20px;
-}
-.inputElement {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
   border-top: 1px solid #5f6368;
-}
-.levelTabAccess {
   padding-top: 30px;
 }
 .title {
@@ -77,18 +63,8 @@
   text-decoration-line: underline;
   color: #392e2d;
 }
-.checkBoxWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
 .checkboxContainer {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-}
-.buttonContainer {
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }

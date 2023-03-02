@@ -68,24 +68,23 @@ export const Button = styled.button`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: ${({ fontSize }) => (fontSize ? fontSize : "20px")};
+  font-size: 20px;
   line-height: 110%;
   text-align: center;
   color: #ffffff;
-  background: ${({ background }) => (background ? background : "#37266b")};
+  background: #37266b;
+
   border-radius: 10px;
-  padding: ${({ padding }) => (padding ? padding : "12px 18px")};
+  padding: 12px 30px;
   margin-top: 20px;
   border: none;
   outline: none;
   cursor: pointer;
   width: ${({ width }) => (width ? width : "auto")};
   :active {
-    box-shadow: ${({ boxShadow }) =>
-      boxShadow ? boxShadow : "0px 0px 25px #7f55da"};
+    box-shadow: 0px 0px 25px #7f55da;
   }
   @media only screen and (max-width: 1350px) {
     font-size: 16px;
-    font-size: ${({ fontSize }) => (fontSize ? fontSize : "16px")};
   }
 `;

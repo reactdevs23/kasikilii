@@ -7,7 +7,12 @@ import styles from "./styles.module.css";
 const ProfileSetting = () => {
   const [userTab, setUserTab] = useState(false);
   const [distributorTab, setDistributorTab] = useState(false);
+  const [popConfirmation, setPopConfirmation] = useState(false);
   const [appManagement, setAppManagement] = useState(false);
+  const [tickUpdate, setTickUpdate] = useState(false);
+  const [downloadExcel, setDownloadExcel] = useState(false);
+  const [popTransfer, setPopTransfer] = useState(false);
+
   const [values, setValues] = useState({
     oldpassword: "",
     newpassword: "",
@@ -15,6 +20,7 @@ const ProfileSetting = () => {
     surname: "",
     email: "",
     mobilenumber: "",
+    staffcode: "",
   });
   const headingData = [
     { key: "ADMIN NAME:", value: "LLEWELLYN MOTINGA" },
@@ -92,46 +98,110 @@ const ProfileSetting = () => {
           </Title>
         </div>
       </div>
+      <div className={styles.staffCodeContainer}>
+        <div></div>
+        <div></div>
+        <Input
+          type="text"
+          placeholder="STAFF CODE"
+          value={values["staffcode"]}
+          onChange={onChange}
+        />
+      </div>
       <form className={styles.inputWrapper}>
-        <div>
-          {passwordInputs.map((el, i) => (
-            <div className={styles.inputContainer} key={i}>
-              <Input {...el} value={values[el.name]} onChange={onChange} />
-            </div>
-          ))}
-          <Button onClick={handleSubmit} width="100%" type="submit">
-            CHANGE PASSWORD
-          </Button>
-        </div>
-        <div>
-          {detailsInput.map((el, i) => (
-            <div className={styles.inputContainer} key={i}>
-              <Input {...el} value={values[el.name]} onChange={onChange} />
-            </div>
-          ))}
-        </div>
-        <div>
-          <h4 className={styles.title}>LEVEL ( TAB) ACCESS</h4>
-          <div className={styles.checkboxContainer}>
-            <CheckBox
-              checked={userTab}
-              setChecked={setUserTab}
-              label="USER  TAB"
-            />
-            <CheckBox
-              label="DISTRIBUTOR  TAB"
-              checked={distributorTab}
-              setChecked={setDistributorTab}
-            />
-            <CheckBox
-              label="APP MANAGEMENT"
-              checked={appManagement}
-              setChecked={setAppManagement}
-            />
+        <div className={styles.inputElement}>
+          <div>
+            {passwordInputs.map((el, i) => (
+              <div className={styles.inputContainer} key={i}>
+                <Input {...el} value={values[el.name]} onChange={onChange} />
+              </div>
+            ))}
+            <Button
+              onClick={handleSubmit}
+              width="100%"
+              type="submit"
+              fontSize="16px"
+            >
+              CHANGE PASSWORD
+            </Button>
           </div>
-          <Button onClick={handleSubmit} width="100%">
-            CREATE ADMIN
-          </Button>
+          <div>
+            {detailsInput.map((el, i) => (
+              <div className={styles.inputContainer} key={i}>
+                <Input {...el} value={values[el.name]} onChange={onChange} />
+              </div>
+            ))}
+            <Button onClick={handleSubmit} width="100%" fontSize="16px">
+              CREATE STAFF ACCOUNT
+            </Button>
+          </div>
+        </div>
+        <div className={styles.levelTabAccess}>
+          <h4 className={styles.title}>LEVEL ( TAB) ACCESS</h4>
+          <div className={styles.checkBoxWrapper}>
+            <div className={styles.checkboxContainer}>
+              <CheckBox
+                checked={userTab}
+                setChecked={setUserTab}
+                label="USER  TAB"
+              />
+              <CheckBox
+                label="DISTRIBUTOR  TAB"
+                checked={distributorTab}
+                setChecked={setDistributorTab}
+              />
+              <CheckBox
+                label="PoP CONFIRMATONS"
+                checked={popConfirmation}
+                setChecked={setPopConfirmation}
+              />
+              <CheckBox
+                label="APP MANAGEMENT"
+                color="#E53535"
+                paddingTop="30px"
+                checked={appManagement}
+                setChecked={setAppManagement}
+              />
+            </div>
+            <div className={styles.checkboxContainer}>
+              {" "}
+              <CheckBox
+                checked={tickUpdate}
+                setChecked={setTickUpdate}
+                label="TICK UPDATE"
+              />
+              <CheckBox
+                label="DOWNLOAD EXCEL"
+                checked={downloadExcel}
+                setChecked={setDownloadExcel}
+              />
+              <CheckBox
+                label="PoP - TRANSFER"
+                checked={popTransfer}
+                setChecked={setPopTransfer}
+              />
+            </div>
+          </div>
+          <div className={styles.buttonContainer}>
+            <Button
+              onClick={handleSubmit}
+              width="100%"
+              padding="12px 14px"
+              fontSize="14px"
+            >
+              UPDATE PRIVILEGES
+            </Button>
+            <Button
+              onClick={handleSubmit}
+              width="100%"
+              background="#E63535"
+              padding="12px 5px"
+              fontSize="14px"
+              boxShadow="0px 0px 25px #E63535"
+            >
+              FREEZE STAFF ACCOUNT
+            </Button>
+          </div>
         </div>
       </form>
     </div>
