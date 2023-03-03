@@ -26,7 +26,7 @@ const PopConfirmation = () => {
     "Mobile no",
 
     "Region",
-    "Payment Status",
+    "Payment Type",
     "List From Highest : Amount Paid",
     "List From Highest : Credit Bought",
     "List From Lowest: Amount Paid",
