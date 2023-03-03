@@ -5,18 +5,18 @@
   border-top: 1px solid #5f6368;
   border-bottom: 1px solid #5f6368;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
   gap: 23px;
+  grid-template-columns: repeat(10, 1fr);
 }
 .heading:nth-child(6) {
   border-right: 1px solid #000;
-  padding-right: 0px;
+  padding-right: 8px;
 }
 .tableContainer {
   display: grid;
+  gap: 23px;
   /* grid-template-columns: repeat(5, 1fr) 180px 1fr; */
   grid-template-columns: repeat(10, 1fr);
-  gap: 23px;
 }
 
 .table {
@@ -31,6 +31,7 @@
   border-right: 1px solid #000;
   padding-right: 8px;
 }
+
 .viewButton {
   font-family: "Roboto";
   font-style: normal;
@@ -73,7 +74,7 @@
   justify-content: center;
   align-items: center;
   margin: 12px 0;
-  max-height: 25px;
+  height: 25px;
   cursor: pointer;
 }
 .docButton :active {
@@ -100,7 +101,7 @@
   justify-content: center;
   align-items: center;
   margin: 12px 0;
-  max-height: 25px;
+  height: 25px;
   cursor: pointer;
 }
 .actionButton:active {
@@ -121,4 +122,12 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 1440px) {
+  .tableContainer {
+    gap: 10px;
+  }
+  .headingContainer {
+    gap: 10px;
+  }
 }

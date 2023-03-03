@@ -34,3 +34,12 @@ p {
 a {
   text-decoration: none;
 }
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for specific element */
+::-webkit-scrollbar {
+  display: none;
+}
