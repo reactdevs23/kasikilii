@@ -24,11 +24,13 @@ const PopConfirmation = () => {
   const [activeTable, setActiveTable] = useState(0);
   const dropDownItems = [
     "Mobile no",
-    "Status",
+
     "Region",
-    "Request Status",
-    "List From Highest Balance",
-    "List From Lowest Balance",
+    "Payment Status",
+    "List From Highest : Amount Paid",
+    "List From Highest : Credit Bought",
+    "List From Lowest: Amount Paid",
+    "List From Lowest:Credit Bought",
   ];
 
   const searchFunction = (e) => {

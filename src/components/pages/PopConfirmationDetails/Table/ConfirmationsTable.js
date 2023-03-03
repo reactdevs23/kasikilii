@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Title } from "../../../common.styled";
-import ConfirmationPopup from "./ConfirmationPopup/ConfirmationPopup";
+import TransferConfirmation from "./PopUp/TransferConfirmationTabPopup";
 
 import styles from "./styles.module.css";
 
@@ -103,7 +103,7 @@ const ConfirmationTable = ({ heading, tableData }) => {
           ))}
         </div>
       </div>
-      {popup && <ConfirmationPopup setPopup={setPopup} />}
+      {popup && <TransferConfirmation setPopup={setPopup} />}
     </>
   );
 };

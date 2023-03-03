@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const ConfirmationPopup = ({ setPopup }) => {
+const TransferConfirmation = ({ setPopup }) => {
   return (
     <>
       <div className={styles.modal}>
         <h3 className={styles.title}>ALERT !!</h3>
         <p className={styles.text}>
           Are you sure you have received the actual funds for this transaction
+          BECAUSE tokens will now be transferred to distributor
         </p>
         <div className={styles.buttonContainer}>
           <button
@@ -29,4 +30,4 @@ const ConfirmationPopup = ({ setPopup }) => {
   );
 };
 
-export default ConfirmationPopup;
+export default TransferConfirmation;
