@@ -168,7 +168,10 @@ export const requestTableData = [
     creditBought: 2000,
     distrocode: "XK1025",
     pop: "doc",
-    action: "confirm",
+    action: {
+      confirm: "",
+      decline: "",
+    },
   },
   {
     payDate: "02-FEB-22",
@@ -180,7 +183,10 @@ export const requestTableData = [
     creditBought: 10000,
     distrocode: "HY7815",
     pop: "doc",
-    action: "confirm",
+    action: {
+      confirm: "",
+      decline: "",
+    },
   },
   {
     payDate: "02-FEB-22",
@@ -192,7 +198,10 @@ export const requestTableData = [
     creditBought: 100000,
     distrocode: "TR1555",
     pop: "doc",
-    action: "confirm",
+    action: {
+      confirm: "",
+      decline: "",
+    },
   },
   {
     payDate: "02-FEB-22",
@@ -204,7 +213,10 @@ export const requestTableData = [
     creditBought: 20000,
     distrocode: "KB0155",
     pop: "doc",
-    action: "confirm",
+    action: {
+      confirm: "",
+      decline: "",
+    },
   },
 ];
 export const denialsTableData = [

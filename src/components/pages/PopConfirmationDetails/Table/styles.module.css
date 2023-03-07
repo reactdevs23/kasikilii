@@ -6,7 +6,7 @@
   border-bottom: 1px solid #5f6368;
   display: grid;
   gap: 23px;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr) 0.6fr 1.4fr;
 }
 .heading:nth-child(6) {
   border-right: 1px solid #000;
@@ -16,7 +16,7 @@
   display: grid;
   gap: 23px;
   /* grid-template-columns: repeat(5, 1fr) 180px 1fr; */
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr) 0.6fr 1.4fr;
 }
 
 .table {
@@ -80,6 +80,14 @@
 .docButton :active {
   box-shadow: 0px 0px 25px #e63535;
 }
+.actionContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  height: 25px;
+  margin: 12px 0;
+}
 .actionButton {
   font-family: "Roboto";
   font-style: normal;
@@ -100,12 +108,18 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  margin: 12px 0;
-  height: 25px;
+
   cursor: pointer;
+  height: 100%;
 }
 .actionButton:active {
   box-shadow: 0px 0px 25px #1ea52b;
+}
+.declineButton {
+  background: #fb645c;
+}
+.declineButton:active {
+  box-shadow: 0px 0px 25px #fb645c;
 }
 .deleteBox {
   margin: 12px 0px;
