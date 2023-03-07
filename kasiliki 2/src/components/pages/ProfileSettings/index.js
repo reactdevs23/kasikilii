@@ -22,10 +22,10 @@ const ProfileSetting = () => {
     mobilenumber: "",
     staffcode: "",
   });
-  // const headingData = [
-  //   { key: "ADMIN NAME:", value: "LLEWELLYN MOTINGA" },
-  //   { key: "TAB ACCESS:", value: "USER ; DISTRIBUTOR ; APP MANAGEMNET " },
-  // ];
+  const headingData = [
+    { key: "ADMIN NAME:", value: "LLEWELLYN MOTINGA" },
+    { key: "TAB ACCESS:", value: "USER ; DISTRIBUTOR ; APP MANAGEMNET " },
+  ];
   const passwordInputs = [
     {
       type: "password",
@@ -66,11 +66,6 @@ const ProfileSetting = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const headingData = [
-    { key: "AGENT CODE:", value: "XP48585" },
-    { key: "AGENT NAME:", value: "XLLEWELLYN MOTINGA" },
-    { key: "ACCESS:", value: "KEETMANSHOOP" },
-  ];
   return (
     <div>
       {" "}
