@@ -155,7 +155,35 @@ export const userDetails = [
     activity: "TRANSFER",
   },
 ];
+export const referrals = [
+  {
+    paidDate: "02-FEB -22",
+    referrer: "264818083704",
+    tokens: "3",
+    region: "KHOMAS",
+    player: 264818529632,
 
+    amount: "50",
+  },
+  {
+    paidDate: "02-FEB -22",
+    referrer: "264818083704",
+    tokens: "3",
+    region: "KARAS",
+    player: 26485965445,
+
+    amount: "200",
+  },
+  {
+    paidDate: "02-FEB -22",
+    referrer: "264818083704",
+    tokens: "3",
+    region: "ERONGO",
+    player: 26481774585,
+
+    amount: "300",
+  },
+];
 // popupConfirmationData
 export const requestTableData = [
   {

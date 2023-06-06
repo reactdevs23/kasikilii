@@ -33,6 +33,16 @@ const Sidebar = () => {
       navItem: "APP MANAGEMENT",
       to: "/appmanagement",
     },
+    {
+      icon: appmangement,
+      navItem: "REFERRALS",
+      to: "/referrals",
+    },
+    {
+      icon: appmangement,
+      navItem: "PUSH NOTIFICATIONS",
+      to: "/pushnotifications",
+    },
   ];
   return (
     <section className={styles.sidebar}>

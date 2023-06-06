@@ -37,6 +37,24 @@ const UserDetails = () => {
             </Tagline>
           ))}
         </div>
+        <div className={styles.cashInCashOutContainer}>
+          <div className={styles.cashInCashOut}>
+            <p className={styles.text}>Total Cash-in </p>
+            <p className={styles.amountBox}>645</p>
+          </div>
+          <div className={styles.cashInCashOut}>
+            <p className={styles.text}>Total Cash-out </p>
+            <p className={styles.amountBox}>645</p>
+          </div>
+          <div className={styles.cashInCashOut}>
+            <p className={styles.text}>Profit /Loss </p>
+            <p className={styles.amountBox}>645</p>
+          </div>
+          <div className={styles.cashInCashOut}>
+            <p className={styles.text}>Referrals </p>
+            <p className={styles.amountBox}>645</p>
+          </div>
+        </div>
         <div>
           <Tagline className={styles.tagline}>BALANCE</Tagline>
           <AmountBox center>645</AmountBox>

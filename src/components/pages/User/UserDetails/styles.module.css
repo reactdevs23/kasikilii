@@ -11,6 +11,7 @@
 .distributorInfo {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   border-top: 1px solid #5f6368;
   border-bottom: 1px solid #5f6368;
   padding: 40px 0;
@@ -42,7 +43,41 @@
   color: #5f6368;
   padding: 15px 0;
 }
+.cashInCashOutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cashInCashOut {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  gap: 16px;
+}
+.text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+
+  color: #392e2d;
+}
+.amountBox {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 96%;
+  text-align: right;
+  letter-spacing: 0.44px;
+  color: #ffffff;
+  background: #1ea52b;
+  border-radius: 14px;
+  min-width: 132px;
+  padding: 8px 12px;
+}
 .tableContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.3fr 0.8fr;

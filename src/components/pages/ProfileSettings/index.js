@@ -66,21 +66,23 @@ const ProfileSetting = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const headingData = [
-    { key: "AGENT CODE:", value: "XP48585" },
-    { key: "AGENT NAME:", value: "XLLEWELLYN MOTINGA" },
-    { key: "ACCESS:", value: "KEETMANSHOOP" },
-  ];
+
   return (
     <div>
       {" "}
       <div className={styles.header}>
-        {headingData.map((el, i) => (
-          <p className={styles.keyValue} key={i}>
-            <span>{el.key}</span>
-            <span className={styles.value}>{el.value}</span>
+        <p className={styles.keyValue}>
+          <span>AGENT CODE</span>
+          <span className={styles.value}>XP48585</span>
+        </p>
+        <div className={styles.keyValueContainer}>
+          <p className={styles.keyValue}>TAB ACCESS</p>
+          <p className={styles.valueContainer}>
+            {" "}
+            <span className={styles.value}>USER TAB</span>{" "}
+            <span className={styles.value}> DISTRIBUTOR TAB</span>
           </p>
-        ))}
+        </div>
       </div>
       <h2 className={styles.heading}>PROFILE SETTINGS</h2>
       <div className={styles.infoContainer}>
@@ -142,49 +144,55 @@ const ProfileSetting = () => {
           </div>
         </div>
         <div className={styles.levelTabAccess}>
-          <h4 className={styles.title}>LEVEL ( TAB) ACCESS</h4>
           <div className={styles.checkBoxWrapper}>
-            <div className={styles.checkboxContainer}>
-              <CheckBox
-                checked={userTab}
-                setChecked={setUserTab}
-                label="USER  TAB"
-              />
-              <CheckBox
-                label="DISTRIBUTOR  TAB"
-                checked={distributorTab}
-                setChecked={setDistributorTab}
-              />
-              <CheckBox
-                label="PoP CONFIRMATONS"
-                checked={popConfirmation}
-                setChecked={setPopConfirmation}
-              />
-              <CheckBox
-                label="APP MANAGEMENT"
-                color="#E53535"
-                paddingTop="30px"
-                checked={appManagement}
-                setChecked={setAppManagement}
-              />
+            <div>
+              <h4 className={styles.title}>LEVEL ( TAB) ACCESS</h4>
+              <div className={styles.checkboxContainer}>
+                <CheckBox
+                  checked={userTab}
+                  setChecked={setUserTab}
+                  label="USER  TAB"
+                />
+                <CheckBox
+                  label="DISTRIBUTOR  TAB"
+                  checked={distributorTab}
+                  setChecked={setDistributorTab}
+                />
+                <CheckBox
+                  label="PoP CONFIRMATONS"
+                  checked={popConfirmation}
+                  setChecked={setPopConfirmation}
+                />
+                <CheckBox
+                  label="APP MANAGEMENT"
+                  color="#E53535"
+                  paddingTop="30px"
+                  checked={appManagement}
+                  setChecked={setAppManagement}
+                />
+              </div>
             </div>
-            <div className={styles.checkboxContainer}>
+            <div>
               {" "}
-              <CheckBox
-                checked={tickUpdate}
-                setChecked={setTickUpdate}
-                label="TICK UPDATE"
-              />
-              <CheckBox
-                label="DOWNLOAD EXCEL"
-                checked={downloadExcel}
-                setChecked={setDownloadExcel}
-              />
-              <CheckBox
-                label="PoP - TRANSFER"
-                checked={popTransfer}
-                setChecked={setPopTransfer}
-              />
+              <h4 className={styles.title}>BUTTON ACCESS</h4>
+              <div className={styles.checkboxContainer}>
+                {" "}
+                <CheckBox
+                  checked={tickUpdate}
+                  setChecked={setTickUpdate}
+                  label="TICK UPDATE"
+                />
+                <CheckBox
+                  label="DOWNLOAD EXCEL"
+                  checked={downloadExcel}
+                  setChecked={setDownloadExcel}
+                />
+                <CheckBox
+                  label="PoP - TRANSFER"
+                  checked={popTransfer}
+                  setChecked={setPopTransfer}
+                />
+              </div>
             </div>
           </div>
           <div className={styles.buttonContainer}>
