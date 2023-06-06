@@ -16,6 +16,7 @@ import ForgotPassword from "./components/pages/ForgotPassword/ForgotPassword";
 import styles from "./App.module.css";
 import PopConfirmation from "./components/pages/PopConfirmationDetails";
 import Referrals from "./components/pages/Referrals";
+import PushNotifications from "./components/pages/PushNotifications";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -43,6 +44,10 @@ function App() {
                 <Route path="/user" element={<User />}></Route>
                 <Route path="/userDetails" element={<UserDetails />}></Route>
                 <Route path="/referrals" element={<Referrals />}></Route>
+                <Route
+                  path="/pushnotifications"
+                  element={<PushNotifications />}
+                ></Route>
                 <Route
                   path="/popconfirmation"
                   element={<PopConfirmation />}

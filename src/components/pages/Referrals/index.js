@@ -20,9 +20,6 @@ const Referrals = () => {
     "List From Highest Balance",
     "List From Lowest Balance",
   ];
-  const [file, setFile] = useState("");
-  const [tickUpdate, setTickUpdate] = useState(false);
-  const [massUpdate, setMassUpdate] = useState(false);
 
   const searchFunction = (e) => {
     setSearchValue(e.target.value);

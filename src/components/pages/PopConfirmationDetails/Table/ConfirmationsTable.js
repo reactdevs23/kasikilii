@@ -93,12 +93,19 @@ const ConfirmationTable = ({ heading, tableData }) => {
                 {el.distrocode}
               </Title>{" "}
               <button className={styles.docButton}>{el.pop}</button>
-              <button
-                className={styles.actionButton}
-                onClick={() => setPopup(true)}
-              >
-                {el.action}
-              </button>
+              <div className={styles.actionContainer}>
+                <button
+                  className={`${styles.actionButton} ${styles.declineButton}`}
+                >
+                  decline
+                </button>
+                <button
+                  className={styles.actionButton}
+                  onClick={() => setPopup(true)}
+                >
+                  Transfer
+                </button>
+              </div>
             </div>
           ))}
         </div>

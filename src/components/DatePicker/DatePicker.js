@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import styles from "./styles.module.css";
-import "./style.css";
 
-const MyDatePicker = ({ date, setDate, label }) => {
+import styles from "./styles.module.css";
+
+const MyDatePicker = ({ date, setDate, label, type }) => {
   return (
     <div className={styles.myInput}>
       <p className={styles.label}>{label}:</p>
-      <DatePicker
-        className="dddd"
+      <input
         selected={date}
         onChange={(date) => setDate(date)}
-      ></DatePicker>
+        type={type ? type : "date"}
+        className={styles.input}
+      />
     </div>
   );
 };

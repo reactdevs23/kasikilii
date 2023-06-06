@@ -11,3 +11,18 @@
   color: #392e2d;
   padding-bottom: 5px;
 }
+.input {
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+
+  color: #392e2d;
+  width: 100%;
+  border: none;
+  outline: none;
+}

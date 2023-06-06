@@ -1,0 +1,170 @@
+.header {
+  border-bottom: 1px solid #5f6368;
+}
+
+.heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+
+  color: #392e2d;
+}
+
+.searchDatesTotal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+  padding-top: 15px;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contentBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.title,
+.campaignName {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  padding: 20px 0;
+  color: #392e2d;
+}
+.onceOfContainer {
+  padding-top: 35px;
+}
+.sendProcessButton {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 109%;
+
+  text-align: center;
+  letter-spacing: 0.44px;
+
+  color: #ffffff;
+
+  background: #1ea52b;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  display: block;
+  margin-left: auto;
+}
+
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+}
+.text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height */
+
+  color: #392e2d;
+}
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.onceOff {
+  background: linear-gradient(0deg, #6b6c6e, #6b6c6e),
+    linear-gradient(0deg, #6b6c6e, #6b6c6e), #6b6c6e;
+}
+.scheduled {
+  background: linear-gradient(0deg, #1ea52b, #1ea52b),
+    linear-gradient(0deg, #6b6c6e, #6b6c6e), #6b6c6e;
+}
+.amountTitle {
+  text-align: right;
+}
+.tableWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding-top: 40px;
+}
+.campaignNameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.campaingBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.campaignName {
+  padding: 0;
+}
+.input {
+  width: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #d9d9d9;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #392e2d;
+  resize: none;
+  max-width: 250px;
+  padding: 8px 8px;
+}
+.textArea {
+  width: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #d9d9d9;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #392e2d;
+  resize: none;
+  padding: 18px;
+}
+@media only screen and (max-width: 1280px) {
+  .searchDatesTotal {
+    gap: 30px;
+  }
+  .updateBox {
+    padding: 15px 10px;
+  }
+  .buttonContainer {
+    gap: 8px;
+  }
+}

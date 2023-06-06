@@ -184,6 +184,32 @@ export const referrals = [
     amount: "300",
   },
 ];
+export const pushNotifications = [
+  {
+    campaignName: "2$ OFF - PROMOTION",
+    schduleDate: "12-MAR-23",
+    time: "16:00",
+    action: "",
+  },
+  {
+    campaignName: "2$ OFF - PROMOTION",
+    schduleDate: "12-MAR-23",
+    time: "16:00",
+    action: "",
+  },
+  {
+    campaignName: "2$ OFF - PROMOTION",
+    schduleDate: "12-MAR-23",
+    time: "16:00",
+    action: "",
+  },
+  {
+    campaignName: "2$ OFF - PROMOTION",
+    schduleDate: "12-MAR-23",
+    time: "16:00",
+    action: "",
+  },
+];
 // popupConfirmationData
 export const requestTableData = [
   {
@@ -308,7 +334,7 @@ export const confirmationsTableData = [
     creditBought: 2000,
     distrocode: "XK1025",
     pop: "doc",
-    action: "Transfer",
+    action: { decline: "", confirm: "" },
   },
   {
     payDate: "02-FEB-22",
@@ -320,7 +346,7 @@ export const confirmationsTableData = [
     creditBought: 10000,
     distrocode: "HY7815",
     pop: "doc",
-    action: "Transfer",
+    action: { decline: "", confirm: "" },
   },
   {
     payDate: "02-FEB-22",
@@ -332,7 +358,7 @@ export const confirmationsTableData = [
     creditBought: 100000,
     distrocode: "TR1555",
     pop: "doc",
-    action: "Transfer",
+    action: { decline: "", confirm: "" },
   },
   {
     payDate: "02-FEB-22",
@@ -344,7 +370,7 @@ export const confirmationsTableData = [
     creditBought: 20000,
     distrocode: "KB0155",
     pop: "doc",
-    action: "Transfer",
+    action: { decline: "", confirm: "" },
   },
 ];
 export const processedTableData = [
