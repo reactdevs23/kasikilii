@@ -15,13 +15,14 @@ export const Title = styled.p`
   font-style: normal;
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "700")};
   font-size: 16px;
+
   line-height: 150%;
   text-align: ${({ center }) => (center ? "center" : "")};
   color: #392e2d;
   padding: ${({ padding }) => (padding ? padding : "5px")};
   @media only screen and (max-width: 1399px) {
     font-size: ${({ mobileFontSize }) =>
-      mobileFontSize ? mobileFontSize : "16px"};
+      mobileFontSize ? mobileFontSize : "14px"};
   }
 `;
 export const AmountBox = styled.div`

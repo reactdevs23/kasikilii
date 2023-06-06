@@ -13,12 +13,10 @@ const Referrals = () => {
   const [criteria, setCriteria] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const dropDownItems = [
-    "Mobile no",
-    "Status",
-    "Region",
-    "Request Status",
-    "List From Highest Balance",
-    "List From Lowest Balance",
+    "Referrer",
+    "Player",
+    "Referrer Region",
+    "Player Region",
   ];
 
   const searchFunction = (e) => {
@@ -57,12 +55,14 @@ const Referrals = () => {
               onChange={searchFunction}
             />
           </div>
+
           <button className={styles.searchButton} onClick={handleSearch}>
             Search
           </button>
           <button className={styles.downLoadExcelButton}>Download Excel</button>
+
           <div className={styles.totalAmount}>
-            <Title>Referral / Incentive Account Balance</Title>
+            <Title fontSize="14px">Referral / Incentive Account Balance</Title>
             <AmountBox minWidth="100%">10 000</AmountBox>
           </div>
         </div>

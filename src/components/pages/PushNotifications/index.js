@@ -16,17 +16,30 @@ const PushNotifications = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [scheduleTime, setScheduleTime] = useState("");
-  const [chooseDayofWeek, setChooseDayofWeek] = useState("");
+
   const [message, setMessage] = useState("");
   const [campaignName, setCampaignName] = useState("");
+  const [scheduled, setScheduled] = useState(true);
 
-  const dropDownItems = [
-    "Mobile no",
-    "Status",
-    "Region",
-    "Request Status",
-    "List From Highest Balance",
-    "List From Lowest Balance",
+  const [day, setDay] = useState("");
+
+  const criterias = [
+    "All Users",
+    "No Cash-in History",
+    "Cash-in History Only",
+    "No Cashout History",
+    "Cashout History Only",
+    "Incentive History",
+    "No Incentive History",
+  ];
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
   ];
 
   const searchFunction = (e) => {
@@ -35,14 +48,12 @@ const PushNotifications = () => {
 
   return (
     <div>
-      <div className={styles.header}>
-        <h3 className={styles.heading}>REFERRAL DISTRIBUTOR CODE: D_XHR014</h3>
-      </div>
+      <div className={styles.header}></div>
       <div className={styles.searchDatesTotal}>
         <div className={styles.contentBox}>
           <DropDownComponent
             title="Search Criteria"
-            items={dropDownItems}
+            items={criterias}
             value={criteria}
             setValue={setCriteria}
           />
@@ -70,7 +81,13 @@ const PushNotifications = () => {
           <button className={styles.sendProcessButton}>SEND/ PROCESS</button>
           <div className={styles.spaceBetween}>
             <p className={styles.text}>ONCE OFF / NOW </p>
-            <div className={[styles.circle, styles.onceOff].join(" ")}></div>
+            <div
+              onClick={() => setScheduled(false)}
+              className={[
+                styles.circle,
+                !scheduled && styles.activeCircle,
+              ].join(" ")}
+            ></div>
           </div>
           <h2 className={styles.title}>To</h2>
           <MyDatePicker date={endDate} setDate={setEndDate} label="Date" />
@@ -90,15 +107,22 @@ const PushNotifications = () => {
           </div>{" "}
           <div className={styles.spaceBetween}>
             <p className={styles.text}>SCHEDULED </p>
-            <div className={[styles.circle, styles.scheduled].join(" ")}></div>
+            <div
+              onClick={() => setScheduled(true)}
+              className={[styles.circle, scheduled && styles.activeCircle].join(
+                " "
+              )}
+            ></div>
           </div>
           <h2 className={styles.title}>EVERY</h2>
-          <Input
-            name="chosedayoftheweek"
-            label="CHOOSE DAY OF THE WEEK ( 4 WEEKS)"
-            value={chooseDayofWeek}
-            onChange={(e) => setChooseDayofWeek(e.target.value)}
-          />
+          <div>
+            <DropDownComponent
+              title="CHOOSE DAY OF THE WEEK ( 4 WEEKS)"
+              items={days}
+              value={day}
+              setValue={setDay}
+            />
+          </div>
           <MyDatePicker
             label="Time"
             date={scheduleTime}

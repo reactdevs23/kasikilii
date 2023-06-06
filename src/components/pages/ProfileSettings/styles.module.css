@@ -93,7 +93,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 150%;
   text-decoration-line: underline;
   color: #392e2d;
@@ -112,4 +112,12 @@
   display: flex;
   align-items: center;
   gap: 15px;
+}
+@media only screen and (max-width: 1320px) {
+  .checkBoxWrapper {
+    gap: 20px;
+  }
+  .title {
+    font-size: 17px;
+  }
 }

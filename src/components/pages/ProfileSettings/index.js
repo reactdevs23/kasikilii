@@ -12,6 +12,8 @@ const ProfileSetting = () => {
   const [tickUpdate, setTickUpdate] = useState(false);
   const [downloadExcel, setDownloadExcel] = useState(false);
   const [popTransfer, setPopTransfer] = useState(false);
+  const [referralsPage, setReferalsPage] = useState(false);
+  const [pushNotifications, setPushNotifications] = useState(false);
 
   const [values, setValues] = useState({
     oldpassword: "",
@@ -164,9 +166,13 @@ const ProfileSetting = () => {
                   setChecked={setPopConfirmation}
                 />
                 <CheckBox
+                  label="REFERRALS PAGE"
+                  checked={referralsPage}
+                  setChecked={setReferalsPage}
+                />
+                <CheckBox
                   label="APP MANAGEMENT"
                   color="#E53535"
-                  paddingTop="30px"
                   checked={appManagement}
                   setChecked={setAppManagement}
                 />
@@ -180,17 +186,25 @@ const ProfileSetting = () => {
                 <CheckBox
                   checked={tickUpdate}
                   setChecked={setTickUpdate}
+                  color="#E53535"
                   label="TICK UPDATE"
                 />
                 <CheckBox
                   label="DOWNLOAD EXCEL"
                   checked={downloadExcel}
                   setChecked={setDownloadExcel}
+                  color="#E53535"
                 />
                 <CheckBox
                   label="PoP - TRANSFER"
                   checked={popTransfer}
                   setChecked={setPopTransfer}
+                />
+                <CheckBox
+                  color="#E53535"
+                  label="PUSH NOTFICATIONS"
+                  checked={pushNotifications}
+                  setChecked={setPushNotifications}
                 />
               </div>
             </div>

@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Title } from "../../../common.styled";
 
 import styles from "./styles.module.css";
 import { pushNotifications } from "../../../../assets/data";
-import { Link } from "react-router-dom";
 
 const Table = () => {
   const heading = ["CAMPAIGN NAME", "SCHEDULED DATE", "TIME", "ACTION"];
